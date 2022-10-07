@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="main">
+      <form action="">
+        <h3>Order List</h3>
+
+        <div class="form__group">
+          <label for="">Tên món ăn</label>
+          <input id="foodName" type="text" />
+          <p class="error"></p>
+        </div>
+        <div class="form__group">
+          <label for="">Số lượng</label>
+          <input id="quantity" type="text" />
+          <p class="error"></p>
+        </div>
+
+        <div class="form__group">
+          <label for="">Giá</label>
+          <input id="price" type="text" />
+          <p class="error"></p>
+        </div>
+
+        <div class="form__group">
+          <label>Loại đồ ăn</label>
+          <input type="text" id="typeFood" list="ide" />
+          <datalist id="ide">
+            <option value="Tráng miệng" />
+            <option value="Món chính" />
+            <option value="Món phụ" />
+            <option value="Đồ uống" />
+          </datalist>
+          <p class="error"></p>
+        </div>
+
+        <div class="form__group">
+          <label for="">Ảnh</label>
+          <input
+            id="image"
+            type="file"
+            accept="image/png, image/gif, image/jpeg"
+          />
+          <p class="error"></p>
+          <img src="" alt="" id="previewImage" />
+        </div>
+
+        <div class="form__group">
+          <label for="">Mô tả</label>
+          <textarea name="" id="decs" cols="30" rows="5"></textarea>
+          <p class="error"></p>
+        </div>
+
+        <button class="btn_submit">Thêm mới</button>
+      </form>
+
+      <div class="list">
+        <table>
+          <thead>
+            <tr>
+              <td width="5%">Stt</td>
+              <td width="30%">Tên món ăn</td>
+              <td width="10%">Số lượng</td>
+              <td width="25%">Loại đồ ăn</td>
+              <td width="10%">Hết hàng</td>
+              <td width="20%">Chức năng</td>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script type="module" src="./assets/js/main.js"></script>
+  </body>
+</html>
