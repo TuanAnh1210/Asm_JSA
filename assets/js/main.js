@@ -15,6 +15,8 @@ let arrs = localStorageService.get("list-items")
   ? localStorageService.get("list-items")
   : [];
 
+let imageUser = "";
+
 btn_submit.onclick = (e) => {
   e.preventDefault();
 
@@ -22,9 +24,13 @@ btn_submit.onclick = (e) => {
     foodName: "",
     quantity: "",
     typeFood: "",
+    decs: "",
+    image: "",
+    price: "",
   };
 
   if (validatiton(obj)) {
+    obj.imageUser = imageUser;
     arrs.push(obj);
     localStorageService.set("list-items", arrs);
     render();
@@ -74,6 +80,7 @@ image.onchange = function (e) {
 
     result.then((res) => {
       previewImage.src = res.secure_url;
+      imageUser = res.secure_url;
     });
   };
 };
